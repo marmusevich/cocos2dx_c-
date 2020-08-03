@@ -27,6 +27,12 @@ private:
 	bool addShip(const cocos2d::Size& visibleSize);
 	bool addBackgrund(const cocos2d::Size& visibleSize);
 
+	void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
+	void onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
+	void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event);
+
+
+
 	//------------------------------------------
 	cocos2d::SpriteBatchNode* m_batchNode;
 	cocos2d::Sprite* m_ship;
