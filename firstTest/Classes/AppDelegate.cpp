@@ -24,8 +24,13 @@
 
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "SpaceGame/CSpaceGame.h"
 
 // #define USE_AUDIO_ENGINE 1
+
+//#define _START_SCENE_NAME_ HelloWorld
+#define _START_SCENE_NAME_ CSpaceGame
+
 
 #if USE_AUDIO_ENGINE
 #include "audio/include/AudioEngine.h"
@@ -107,7 +112,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    //auto scene = HelloWorld::createScene();
+    auto scene = _START_SCENE_NAME_::createScene();
 
     // run
     director->runWithScene(scene);
