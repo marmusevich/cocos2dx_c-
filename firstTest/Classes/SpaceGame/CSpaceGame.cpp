@@ -1,4 +1,4 @@
-#include "CSpaceGame.h"
+#include "CSpaceGame.hpp"
 
 USING_NS_CC;
 

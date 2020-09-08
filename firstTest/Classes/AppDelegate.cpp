@@ -22,15 +22,14 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#include "AppDelegate.h"
-#include "HelloWorldScene.h"
-#include "SpaceGame/CSpaceGame.h"
-#include "GeometryGames/CGeometryGames.h"
+#include "AppDelegate.hpp"
+#include "SpaceGame/CSpaceGame.hpp"
+#include "GeometryGames/CGeometryGames.hpp"
 
 // #define USE_AUDIO_ENGINE 1
 
-//#define _START_SCENE_NAME_ HelloWorld
-#define _START_SCENE_NAME_ CSpaceGame
+//#define START_SCENE_NAME CSpaceGame
+#define START_SCENE_NAME CGeometryGames
 
 
 #if USE_AUDIO_ENGINE
@@ -113,8 +112,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    //auto scene = HelloWorld::createScene();
-    auto scene = _START_SCENE_NAME_::createScene();
+    auto scene = START_SCENE_NAME::createScene();
 
     // run
     director->runWithScene(scene);
@@ -139,3 +137,5 @@ void AppDelegate::applicationWillEnterForeground() {
     AudioEngine::resumeAll();
 #endif
 }
+
+#undef START_SCENE_NAME
