@@ -58,10 +58,12 @@ endif()
 list(APPEND GAME_SOURCE
      Classes/AppDelegate.cpp
      Classes/SpaceGame/CSpaceGame.cpp
+	 Classes/GeometryGames/CGeometryGames.cpp
      )
 list(APPEND GAME_HEADER
-     Classes/AppDelegate.h
-     Classes/SpaceGame/CSpaceGame.h
+     Classes/AppDelegate.hpp
+     Classes/SpaceGame/CSpaceGame.hpp
+	 Classes/GeometryGames/CGeometryGames.hpp
      )
 
 if(ANDROID)

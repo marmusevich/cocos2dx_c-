@@ -25,6 +25,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "SpaceGame/CSpaceGame.h"
+#include "GeometryGames/CGeometryGames.h"
 
 // #define USE_AUDIO_ENGINE 1
 

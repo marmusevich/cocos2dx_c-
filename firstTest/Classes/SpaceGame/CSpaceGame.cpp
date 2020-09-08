@@ -191,7 +191,7 @@ bool CSpaceGame::addBackgrund(const Size& visibleSize)
     //m_backgroundNode->addChild(m_spaceDust1, 0, dustSpeed, Point(0, visibleSize.height / 2));
     //m_backgroundNode->addChild(m_spaceDust2, 0, dustSpeed, Point(_spaceDust1->getContentSize().width, visibleSize.height / 2));
     m_backgroundNode->addChild(m_galaxy, -1, bgSpeed, Point(0, visibleSize.height * 0.7f));
-    m_backgroundNode->addChild(m_planetSunrise, -1, bgSpeed, Point(600, visibleSize.height * 0.5f));
+    m_backgroundNode->addChild(m_planetSunrise, -1, bgSpeed, Point(600, visibleSize.height * 0.0f));
     m_backgroundNode->addChild(m_spatialAnomaly1, -1, bgSpeed, Point(900, visibleSize.height * 0.3f));
     m_backgroundNode->addChild(m_spatialAnomaly2, -1, bgSpeed, Point(1500, visibleSize.height * 0.9f));
 
