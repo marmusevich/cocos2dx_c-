@@ -28,8 +28,8 @@
 
 // #define USE_AUDIO_ENGINE 1
 
-//#define START_SCENE_NAME CSpaceGame
-#define START_SCENE_NAME CGeometryGames
+#define START_SCENE_NAME CSpaceGame
+//#define START_SCENE_NAME CGeometryGames
 
 
 #if USE_AUDIO_ENGINE
