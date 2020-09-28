@@ -5,9 +5,7 @@
 
 #include "cocos2d.h"
 
-//#include <memory>
-//#include <vector>
-#include <list>
+#include<utility>
 
 class CGeometryGames : public cocos2d::Scene
 {
@@ -15,31 +13,26 @@ public:
 	// implement the "static create()" method manually
 	CREATE_FUNC(CGeometryGames);
 	static cocos2d::Scene* createScene();
-	virtual bool init();
 
-	virtual void update(float dt);
 private:
-	/*
-	class SHolderPoint
-	{
-		const cocos2d::DrawNode* dn;
-	public:
-		SHolderPoint(Vec2);
+	virtual bool init();
+	virtual void update(float dt);
 
-		
-		//todo how can i update and calculate
-		void update(float dt);
-		bool isDead();
-	};
-	std::list<SHolderPoint> points;
 	
-	*/
-	
+	typedef std::pair<cocos2d::Vec2, cocos2d::Vec2> tLinePos;
+	const tLinePos calcLinePos(const float t) const;
 
+
+
+	// convert cord from polyar to decard
+	const cocos2d::Vec2 toDecCord(cocos2d::Vec2 polyr) const;
+
+	const cocos2d::Vec2  calcPolyr(const float fi) const;
+
+
+
+	//void callback3(Node* sender, long data);
 	cocos2d::DrawNode* dn;
-	//TODO investigat how can i manage memory with node
-	//std::shared_ptr<DrawNode> dn;
-
 };
 
 #endif // GEOMETRYGAMES_CGEOMETRYGAMES_SCENE_H
