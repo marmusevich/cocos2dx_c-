@@ -2,6 +2,8 @@
 
 #include "audio/include/AudioEngine.h"
 
+//#include "audio/include/SimpleAudioEngine.h"
+
 #include <cmath>
 
 USING_NS_CC;
@@ -142,8 +144,15 @@ bool CSpaceGame::init()
     AudioEngine::preload(LASER_SHIP);
 
 
-    int audio_id = AudioEngine::play2d("d:/_GitHub/cocos2dx_c-/firstTest/Resources/SpaceGameResources/Sounds/SpaceGame.wav", true, 1.0f);
+    int audioID = AudioEngine::play2d("SpaceGameResources/Sounds/SpaceGame.wav", true, 1.0f);
 
+    AudioEngine::AudioState s = AudioEngine::getState(audioID);
+
+
+    //auto audio = SimpleAudioEngine::getInstance();
+
+    //// set the background music and continuously play it.
+    //audio->playBackgroundMusic("Resources/SpaceGameResources/Sounds/SpaceGame.wav", true);
 
 
     m_lives = 3;

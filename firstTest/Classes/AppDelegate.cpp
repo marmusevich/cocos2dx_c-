@@ -25,10 +25,12 @@
 #include "AppDelegate.hpp"
 #include "SpaceGame/CSpaceGame.hpp"
 #include "GeometryGames/CGeometryGames.hpp"
+#include "Asteroids/CAsteroidsGame.hpp"
 
-// #define USE_AUDIO_ENGINE 1
+ #define USE_AUDIO_ENGINE 1
 
-#define START_SCENE_NAME CSpaceGame
+#define START_SCENE_NAME CAsteroidsGame
+//#define START_SCENE_NAME CSpaceGame
 //#define START_SCENE_NAME CGeometryGames
 
 

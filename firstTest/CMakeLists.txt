@@ -59,11 +59,13 @@ list(APPEND GAME_SOURCE
      Classes/AppDelegate.cpp
      Classes/SpaceGame/CSpaceGame.cpp
 	 Classes/GeometryGames/CGeometryGames.cpp
+	 Classes/Asteroids/CAsteroidsGame.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.hpp
      Classes/SpaceGame/CSpaceGame.hpp
 	 Classes/GeometryGames/CGeometryGames.hpp
+	 Classes/Asteroids/CAsteroidsGame.hpp
      )
 
 if(ANDROID)
